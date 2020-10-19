@@ -1,11 +1,13 @@
 <h2> <%= @trip.title %></h2>
 
-<%= image_tag @trip.image, :class => 'feature', :alt => @trip.title %>
+<%= image_tag @trip.image, :class => 'feature', :alt => @trip.title if @trip.image.present? %>
 
 <ul>
   <li>Title: <%= @trip.title %></li>
-  <% if @trip.item_id.present? %>
+  <% if @trip.items.any? %>
+  <% @items.each do |item| %>
   <li>Itinerary: <%= link_to @trip.item.flight, @trip.item %></li>
+  <% end %>
   <% end %>
   <li>Date: <%= @trip.date %></li>
 </ul>
