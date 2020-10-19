@@ -1,0 +1,13 @@
+<%= form_for @trip do |f| %>
+
+<%= f.label :title %>
+<%= f.text_field :title %>
+
+<%= f.label :date %>
+<%= f.date_field :date %>
+
+<%= f.label :image %>
+<%= f.url_field :image %>
+
+<%= f.submit "Save" %>
+<% end %>

@@ -1,0 +1,16 @@
+<h2> <%= @trip.title %></h2>
+
+<%= image_tag @trip.image, :class => 'feature', :alt => @trip.title %>
+
+<ul>
+  <li>Title: <%= @trip.title %></li>
+  <% if @trip.item_id.present? %>
+  <li>Itinerary: <%= link_to @trip.item.flight, @trip.item %></li>
+  <% end %>
+  <li>Date: <%= @trip.date %></li>
+</ul>
+
+<div class="controls">
+  <%= link_to "Edit trip", edit_trip_path(@trip) %>
+  <%= link_to "Remove trip", @trip, :method => :delete, :data => { :confirm => 'You are about to delete this trip. Would you like to proceed?' } %>
+</div>
