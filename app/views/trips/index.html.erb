@@ -1,5 +1,9 @@
-<h1><%= @trip.title %></h1>
+<h1>Trips</h1>
 
+<% if @trips.present? %>
 <% @trips.each do |trip| %>
-<p><%= @trip.title %></p>
+<p><%= link_to trip.title %></p>
+<% end %>
+<% else %>
+<%= "There are no planned trips." %>
 <% end %>

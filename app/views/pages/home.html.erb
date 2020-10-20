@@ -1,6 +1,11 @@
-<h1>HELLO</h1>
+<h1>Welcome</h1>
 
 <% if @current_user.present? %>
-<p>Welcome, <%= @current_user.username %></p>
-<p><%= link_to @current_user.trips %></p>
+<strong><p><%= @current_user.username %></p></strong>
+<% end %>
+
+<% if @current_user.trips.present? %>
+<% @trips.each do |trip| %>
+<p><%= link_to trip.title %></p>
+<% end %>
 <% end %>

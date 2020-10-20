@@ -3,13 +3,18 @@
 <%= image_tag @trip.image, :class => 'feature', :alt => @trip.title if @trip.image.present? %>
 
 <ul>
-  <li>Title: <%= @trip.title %></li>
   <% if @trip.items.any? %>
   <% @items.each do |item| %>
-  <li>Itinerary: <%= link_to @trip.item.flight, @trip.item %></li>
+  <li>Flight: <%= link_to item.flight, trip_path(item.id) %></li>
+  <li>Accomodation: <%= link_to item.accomodation, trip_path(item.id) %></li>
+  <li>Activities: <%= link_to item.activity, trip_path(item.id) %></li>
+  <li>Transportation: <%= link_to item.transport, trip_path(item.id) %></li>
+  <li>Insurance: <%= link_to item.insurance, trip_path(item.id) %></li>
+  <li>Miscellaneous: <%= link_to item.misc, trip_path(item.id) %></li>
   <% end %>
   <% end %>
-  <li>Date: <%= @trip.date %></li>
+  <li>Start Date: <%= @trip.start_date %></li>
+  <li>End Date: <%= @trip.end_date %></li>
 </ul>
 
 <div class="controls">

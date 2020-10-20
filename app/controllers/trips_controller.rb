@@ -1,6 +1,6 @@
 class TripsController < ApplicationController
   def index
-    @trips = Trip.all
+    @trips = Trip.where(:user_id => @current_user.id)
   end
 
   def new
@@ -18,6 +18,7 @@ class TripsController < ApplicationController
 
   def show
     @trip = Trip.find params[:id]
+    @items = @trip.items
   end
 
   def update
@@ -34,6 +35,6 @@ class TripsController < ApplicationController
 
   private
   def trip_params
-    params.require(:trip).permit(:title, :date, :user_id)
+    params.require(:trip).permit(:title, :start_date, :end_date, :image, :user_id)
   end
 end
