@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   delete '/login' => 'session#destroy'
 
   resources :trips
-
+  resources :items
 end

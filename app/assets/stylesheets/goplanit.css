@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;700&display=swap');
+
 body {
-  background-color: white;
+  background-color: dodgerblue;
 }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
+.main-container {
+  min-width: 960px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
 }
 
 .thumb {
@@ -13,4 +18,80 @@ body {
 
 .feature {
   max-height: 30em;
+}
+
+img.man-with-dog {
+  width: 514px;
+}
+
+.side-box-white {
+  background-color: white;
+  width: 514px;
+  flex-grow: 0;
+  position: relative;
+  height: 100%;
+}
+
+main {
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.signin-signup-button {
+  color: rgba(255,255,255,0.85);
+  background: #ea4c89;
+}
+
+label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  width: 100%;
+  margin-right: 8px;
+  font-size: 20px;
+  display: grid;
+  margin-top: 24px;
+  height: 15px;
+}
+
+input {
+  width: 100%;
+  margin-right: 8px;
+  font-size: 24px;
+  border-radius: 10px;
+  height: 40px;
+  border: 1px solid #efcbcb7d;
+  display: grid;
+  margin-top: 24px;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+}
+
+nav {
+  margin: 0 auto;
+  position: absolute;
+  display: flex;
+  right: 0;
 }

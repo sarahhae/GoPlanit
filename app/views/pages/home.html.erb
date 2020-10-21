@@ -6,6 +6,6 @@
 
 <% if @current_user.trips.present? %>
 <% @trips.each do |trip| %>
-<p><%= link_to trip.title %></p>
+<p><%= link_to trip.title, items_path %></p>
 <% end %>
 <% end %>
