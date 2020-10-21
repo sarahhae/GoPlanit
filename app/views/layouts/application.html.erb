@@ -11,9 +11,6 @@
 
 <body>
   <div class="main-container">
-    <header>
-      <h1>Goplanit</h1>
-    </header>
     <nav>
       <%= link_to 'Home', root_path %>
       <% if @current_user.present? %>
@@ -21,10 +18,10 @@
       <%= link_to 'Users', users_path %>
       <% end %>
       <%= link_to 'New Trip', new_trip_path %>
-      <%= link_to "Log out #{ @current_user.username }", login_path, :method => 'delete' %>
+      <%= link_to "Log out", login_path, :method => 'delete', :class => 'logout-button' %>
       <% else %>
       <%= link_to 'Sign up', new_user_path %>
-      <%= link_to 'Log in', login_path %>
+      <%= link_to 'Log in', login_path, :class => 'login-button' %>
       <% end %>
     </nav>
     <%= yield %>

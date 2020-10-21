@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-body {
-  background-color: dodgerblue;
+/* ------------------- homepage ------------------- */
+
+html, body {
+  background-color: ghostwhite;
+  min-width: 960px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .main-container {
@@ -12,8 +19,39 @@ body {
   overflow: hidden;
 }
 
-.thumb {
-  height: 12em;
+/* ------------------- Signin, Signup page ------------------- */
+
+.sidebar {
+  height: 100%;
+  line-height: 10px;
+  width: 514px;
+  background: white;
+}
+
+.sidebarwords {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 200px;
+  text-align: center;
+  font-weight: 700;
+  padding: 40px;
+  line-height: 1.5;
+}
+
+header {
+  max-width: 100%;
+  margin: 0;
+  padding: 35px;
+  position: relative;
+  background: white;
+}
+
+.goplanit {
+  font-family: 'Lobster', cursive;
+  margin: 60px 40px 40px 40px;
+  font-size: 40px;
+  position: absolute;
+  display: inline-block;
+  background: white;
 }
 
 .feature {
@@ -21,15 +59,10 @@ body {
 }
 
 img.man-with-dog {
-  width: 514px;
-}
-
-.side-box-white {
-  background-color: white;
-  width: 514px;
-  flex-grow: 0;
-  position: relative;
-  height: 100%;
+  width: 500px;
+  position: absolute;
+  display: grid;
+  bottom: 10px;
 }
 
 main {
@@ -41,17 +74,21 @@ main {
   margin: 0;
   padding: 0;
   vertical-align: baseline;
-  display: flex;
+  display: grid;
   justify-content: center;
   flex-grow: 1;
   margin: 0;
   padding: 0;
 }
 
-.signin-signup-button {
-  color: rgba(255,255,255,0.85);
-  background: #ea4c89;
-}
+.signin-signup-content {
+  display: grid;
+  margin: 0;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50%;
+  }
 
 label {
   font-family: 'Montserrat', sans-serif;
@@ -71,9 +108,33 @@ input {
   border-radius: 10px;
   height: 40px;
   border: 1px solid #efcbcb7d;
-  display: grid;
   margin-top: 24px;
+  outline: none;
+  text-align: center;
 }
+
+input:hover {
+  transition-duration: 0.2s;
+  border: 3px solid #efcbcb7d;
+  height: 40px;
+  outline: none;
+}
+
+.submit-button {
+  color: rgba(255,255,255,0.85);
+  background: #ea4c89;
+  outline: none;
+}
+
+.invalid {
+  color: #795548;
+  background: #ea4c894a;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+/* ------------------- General ------------------- */
 
 h1 {
   font-family: 'Montserrat', sans-serif;
@@ -89,9 +150,30 @@ p {
   font-weight: 200;
 }
 
+/* ------------------- Navigation ------------------- */
+
 nav {
   margin: 0 auto;
-  position: absolute;
-  display: flex;
   right: 0;
+  position: absolute;
+  display: inline-block;
+  padding: 1.2em;
+  font-size: 15px;
 }
+
+a {
+  text-decoration: none;
+}
+
+.login-button, .logout-button {
+
+}
+/* ------------------- User homepage / Profile ------------------- */
+
+.trip-link {
+}
+
+/* ------------------- Trips page ------------------- */
+
+
+/* ------------------- Edit / New page ------------------- */

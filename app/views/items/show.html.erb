@@ -1,5 +1,3 @@
-<h2> <%= @item.title %></h2>
-
 <% if @trip.items.any? %>
 <% @items.each do |item| %>
 <li>Flight: <%= link_to item.flight, trip_path(item.id) %></li>

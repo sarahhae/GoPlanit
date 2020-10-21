@@ -1,21 +1,31 @@
-<h1>Sign Up</h1>
+<div class="sidebar">
+  <h1 class="goplanit">Goplanit</h1>
+  <h2 class="sidebarwords">Plan your own unique itinerary and share it with anyone you'd like.</h2>
+  <img class="man-with-dog" src="https://i.pinimg.com/originals/9c/e0/cd/9ce0cdcf35a10c1f28ec7124bb987570.jpg" alt="man-and-dog-image">
+</div>
 
-<% if @user.errors.any? %>
-<ol>
-  <% @user.errors.full_messages.each do |msg| %>
-  <li><%= msg %></li>
-  <% end %>
-</ol>
-<% end %>
+<main>
+  <div class="signin-signup-content">
+    <h1>Sign Up</h1>
+    
+    <% if @user.errors.any? %>
+    <ol>
+      <% @user.errors.full_messages.each do |msg| %>
+      <li class="invalid"><%= msg %></li>
+      <% end %>
+    </ol>
+    <% end %>
 
-<%= form_for @user do |f| %>
-<%= f.label :username %>
-<%= f.text_field :username %>
-<%= f.label :email %>
-<%= f.email_field :email %>
-<%= f.label :password %>
-<%= f.password_field :password %>
-<%= f.label :password_confirmation %>
-<%= f.password_field :password_confirmation %>
-<%= f.submit "Sign up!" %>
-<% end %>
+    <%= form_for @user do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+    <%= f.submit "Sign up!", :class => "submit-button" %>
+    <% end %>
+  </div>
+</main>

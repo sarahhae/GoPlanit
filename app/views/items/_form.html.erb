@@ -1,20 +1,20 @@
-<%= form_for @items do |f| %>
+<%= form_for @item do |f| %>
 
 <%= f.label :flight %>
 <%= f.text_field :flight %>
 
 <%= f.label :accomodation %>
-<%= f.date_field :accomodation %>
+<%= f.text_field :accomodation %>
 
 <%= f.label :activity %>
-<%= f.dtext_field :activity %>
+<%= f.text_field :activity %>
 
 <%= f.label :transport %>
 <%= f.text_field :transport %>
 
 <%= f.label :insurance %>
 <%= f.text_field :insurance %>
-
+ 
 <%= f.label :misc %>
 <%= f.text_field :misc %>
 

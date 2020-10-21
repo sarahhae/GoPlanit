@@ -1,12 +1,17 @@
-<div class="side-box-white">
+<div class="sidebar">
+  <h1 class="goplanit">Goplanit</h1>
+    <h2 class="sidebarwords">Everything in one place.
+Everyone on the same page.</h2>
 <img class="man-with-dog" src="https://i.pinimg.com/originals/9c/e0/cd/9ce0cdcf35a10c1f28ec7124bb987570.jpg" alt="man-and-dog-image">
 </div>
 
-<% if flash[:error].present? %>
-<h2><%= flash[:error] %></h2>
-<% end %>
 
 <main>
+  <div class="signin-signup-content">
+<% if flash[:error].present? %>
+<h2 class="invalid"><%= flash[:error] %></h2>
+<% end %>
+
 <h1>Sign In</h1>
 <%= form_tag login_path do %>
 <%= label_tag :username %>
@@ -15,6 +20,7 @@
 <%= label_tag :password %>
 <%= password_field_tag :password %>
 
-<%= submit_tag "Sign in", :class => "signin-signup-button"%>
+<%= submit_tag "Sign in", :class => "submit-button"%>
 <% end %>
+</div>
 </main>

@@ -11,3 +11,10 @@
   <%= link_to "Edit trip", edit_trip_path(@trip) %>
   <%= link_to "Remove trip", @trip, :method => :delete, :data => { :confirm => 'You are about to delete this trip. Would you like to proceed?' } %>
 </div>
+
+<div>
+<% @trip.items.each do |item| %>
+<p><%= item.details %></p>
+<%= link_to "Edit item", edit_item_path(item) %>
+<% end %>
+</div>

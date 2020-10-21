@@ -1,11 +1,21 @@
-<h1>Welcome</h1>
-
-<% if @current_user.present? %>
-<strong><p><%= @current_user.username %></p></strong>
-<% end %>
-
+<div class="sidebar">
+  <h1 class="goplanit">Goplanit</h1>
+  <h2>Your Trips</h2>
 <% if @current_user.trips.present? %>
 <% @trips.each do |trip| %>
-<p><%= link_to trip.title, items_path %></p>
+<p class="trip-link"><%= link_to trip.title, trip %></p>
 <% end %>
 <% end %>
+</div>
+
+<main>
+<div class="Welcome-current-user">
+<% if @current_user.present? %>
+<p>@<%= @current_user.username %></p>
+<% end %>
+<%= @current_user.email %>
+</div>
+</main>
+
+<!-- show user icon image with @username -->
+<!-- rails generate migration image to user table? -->
