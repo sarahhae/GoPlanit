@@ -5,9 +5,9 @@
 </div>
 
 <main>
-  <div class="signin-signup-content">
+  <div class="signup-content">
     <h1>Sign Up</h1>
-    
+
     <% if @user.errors.any? %>
     <ol>
       <% @user.errors.full_messages.each do |msg| %>
@@ -16,7 +16,13 @@
     </ol>
     <% end %>
 
-    <%= form_for @user do |f| %>
+  <%= form_for(@user, :html => {:multipart => true}) do |f| %>
+    <%= f.label :profile_image %>
+    <%= f.cl_image_upload :image %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :dob %>
+    <%= f.date_field :dob %>
     <%= f.label :username %>
     <%= f.text_field :username %>
     <%= f.label :email %>

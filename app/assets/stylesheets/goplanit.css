@@ -54,10 +54,6 @@ header {
   background: white;
 }
 
-.feature {
-  max-height: 30em;
-}
-
 img.man-with-dog {
   width: 500px;
   position: absolute;
@@ -81,13 +77,22 @@ main {
   padding: 0;
 }
 
-.signin-signup-content {
+.signin-content {
   display: grid;
   margin: 0;
   height: 20%;
   justify-content: center;
   align-items: center;
   margin-top: 50%;
+  }
+
+.signup-content {
+  display: grid;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  height: 10%;
   }
 
 label {
@@ -179,15 +184,57 @@ a {
   margin-top: 10em;
 }
 
+.user-trips-container {
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.upcoming-trips {
+  color: cornflowerblue;
+}
+
 .trip-link {
+  padding-left: 45px;
+  padding-right: 35px;
+  margin-bottom: 0;
+  height: 0px;
+}
+
+.trip-date {
+  line-height: 1px;
+  padding-left: 45px;
+  padding-right: 35px;
+  color: cornflowerblue;
+}
+
+.date-font {
+  font-weight: bolder;
+}
+
+.trip-display {
+  display: grid;
+  align-items: center;
+}
+
+.trip-box {
+  background: aliceblue;
+  display: flex;
+  padding: 30px;
+  margin-bottom: 20px;
+  height: 150px;
+  border-radius: 30px;
+  box-shadow: 5px 5px pink;
+  border: 1px solid cornflowerblue;
+  width: 500px;
 }
 
 .profile-picture {
-  max-width: 150px;
-  height: 150px;
+  max-width: 200px;
+  height: 200px;
   margin-left: 20px;
   border: 5px solid ghostwhite;
-  border-radius: 100px;
+  border-radius: 100%;
   margin: 30px;
 }
 
@@ -197,16 +244,30 @@ a {
   line-height: 0;
 }
 
+.profile-bold {
+  font-weight: bolder;
+  color: ghostwhite;
+  text-align: center;
+  margin-top: 0;
+  margin-left: -10px;
+}
+
+.thumb {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
 .sidebar-radius {
   height: 96.5%;
   line-height: 10px;
   width: 514px;
-  background: cadetblue;
+  background: cornflowerblue;
   border-radius: 30px;
   margin: 1em;
 }
 
-.sidebar-radius:hover {
+.sidebar-radius:hover, .trip-box:hover {
   transform: scale(1.02);
   transition: 1s;
 }
@@ -217,10 +278,59 @@ a {
   font-size: 40px;
   position: absolute;
   display: inline-block;
-  background: cadetblue;
+  background: cornflowerblue;
   color: ghostwhite;
 }
 /* ------------------- Trips page ------------------- */
 
+ul {
+  list-style-type: none;
+}
+
+.feature {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+}
 
 /* ------------------- Edit / New page ------------------- */
+
+main.main-trip-container {
+
+}
+
+.new-trip-content {
+  display: grid;
+  margin: 0;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50%;
+  }
+
+.trip-image {
+  width: 300px;
+  height: 300px;
+}
+
+  /* ------------------- All-users -------------------  */
+
+.table {
+  padding: 50px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
