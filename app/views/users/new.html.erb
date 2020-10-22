@@ -16,7 +16,7 @@
     </ol>
     <% end %>
 
-  <%= form_for(@user, :html => {:multipart => true}) do |f| %>
+    <%= form_for(@user, :html => {:multipart => true}) do |f| %>
     <%= f.label :profile_image %>
     <%= f.cl_image_upload :image %>
     <%= f.label :name %>

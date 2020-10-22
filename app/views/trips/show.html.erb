@@ -30,11 +30,11 @@
     <p><strong>Insurance:</strong> <%= item.insurance %></p>
     <p><strong>Miscellaneous:</strong> <%= item.misc %></p>
     <div class="item-links">
-    <%= link_to "Edit Details", edit_item_path(item) %>
-    <% end %>
-    <% if @trip.present? %>
-    <%= link_to "Add Details", new_item_path(@item, :trip_id => @trip.id) %>
-    <% end %>
+      <%= link_to "Edit Details", edit_item_path(item) %>
+      <% end %>
+      <% if @trip.present? %>
+      <%= link_to "Add Details", new_item_path(@item, :trip_id => @trip.id) %>
+      <% end %>
     </div>
   </div>
 

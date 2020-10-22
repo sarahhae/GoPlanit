@@ -84,7 +84,7 @@ main {
   justify-content: center;
   align-items: center;
   margin-top: 50%;
-  }
+}
 
 .signup-content {
   display: grid;
@@ -93,7 +93,7 @@ main {
   align-items: center;
   margin-top: 5%;
   height: 10%;
-  }
+}
 
 label {
   font-family: 'Montserrat', sans-serif;
@@ -327,7 +327,7 @@ main.main-trip-container {
   justify-content: center;
   align-items: center;
   margin-top: 50%;
-  }
+}
 
 .trip-image {
   width: 300px;
@@ -342,7 +342,7 @@ main.main-trip-container {
   align-items: center;
   margin-top: 25%;
 }
-  /* ------------------- All-users -------------------  */
+/* ------------------- All-users -------------------  */
 
 .table {
   padding: 50px;
