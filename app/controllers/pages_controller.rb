@@ -5,5 +5,4 @@ class PagesController < ApplicationController
     @trips = @current_user.trips
     @user = User.find_by (params[:id])
   end
-
 end

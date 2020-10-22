@@ -12,24 +12,34 @@
 </div>
 
 <main class="main-trip-container">
-<h2> <%= @trip.title %></h2>
+  <h1> <%= @trip.title %></h1>
 
-<%= image_tag @trip.image, :class => 'feature', :alt => @trip.title if @trip.image.present? %>
+  <%= image_tag @trip.image, :class => 'feature', :alt => @trip.title if @trip.image.present? %>
 
-<ul>
-  <li>Start Date: <%= @trip.start_date %></li>
-  <li>End Date: <%= @trip.end_date %></li>
-</ul>
+  <ul>
+    <li><strong>Start Date:</strong> <%= @trip.start_date %></li>
+    <li><strong>End Date:</strong> <%= @trip.end_date %></li>
+  </ul>
 
-<div>
-<% @trip.items.each do |item| %>
-<p><%= item.details %></p>
-<%= link_to "Edit item", edit_item_path(item) %>
-<% end %>
-</div>
+  <div class="items">
+    <% @trip.items.each do |item| %>
+    <p><strong>Flight:</strong> <%= item.flight %></p>
+    <p><strong>Accomodation:</strong> <%= item.accomodation %></p>
+    <p><strong>Activities:</strong> <%= item.activity %></p>
+    <p><strong>Transportation:</strong> <%= item.transport %></p>
+    <p><strong>Insurance:</strong> <%= item.insurance %></p>
+    <p><strong>Miscellaneous:</strong> <%= item.misc %></p>
+    <div class="item-links">
+    <%= link_to "Edit Details", edit_item_path(item) %>
+    <% end %>
+    <% if @trip.present? %>
+    <%= link_to "Add Details", new_item_path(@item, :trip_id => @trip.id) %>
+    <% end %>
+    </div>
+  </div>
 
-<div class="controls">
-  <%= link_to "Edit trip", edit_trip_path(@trip) %>
-  <%= link_to "Remove trip", @trip, :method => :delete, :data => { :confirm => 'You are about to delete this trip. Would you like to proceed?' } %>
-</div>
+  <div class="controls">
+    <%= link_to "Edit trip", edit_trip_path(@trip) %>
+    <%= link_to "Remove trip", @trip, :method => :delete, :data => { :confirm => 'You are about to delete this trip. Would you like to proceed?' } %>
+  </div>
 </main>

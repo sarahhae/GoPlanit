@@ -14,9 +14,11 @@
 
 <%= f.label :insurance %>
 <%= f.text_field :insurance %>
- 
+
 <%= f.label :misc %>
 <%= f.text_field :misc %>
 
-<%= f.submit "Save" %>
+<%= hidden_field_tag :trip_id, params[:trip_id] %>
+
+<%= f.submit "Save", :class => "submit-button" %>
 <% end %>

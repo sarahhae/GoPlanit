@@ -11,6 +11,8 @@ class ItemsController < ApplicationController
 
   def create
     item = Item.create item_params
+    trip = Trip.find params[:trip_id]
+    trip.items << item
     redirect_to trip
   end
 
