@@ -1,8 +1,8 @@
 User.destroy_all
-u1 = User.create :username => 'helloitsme', :email => 'hello@ga.co', :password => 'chickenfries', :admin => true
-u2 = User.create :username => 'helloitsworld',:email => 'helloworld@ga.co', :password => 'Pepperdoll'
-u3 = User.create :username => 'haesun95',:email => 'gptjs@ga.co', :password => 'candycane'
-u4 = User.create :username => 'haesun89',:email => 'gptjs89@ga.co', :password => 'poptarts'
+u1 = User.create :username => 'helloitsme', :name => 'Charlie Wilson', :dob => '08-03-1989', :email => 'hello@ga.co', :password => 'chickenfries', :profile_image => 'https://image.flaticon.com/icons/png/512/147/147140.png', :admin => true
+u2 = User.create :username => 'helloitsworld', :name => 'Lisa Doodle', :dob => '25-02-1992', :email => 'helloworld@ga.co', :password => 'Pepperdoll', :profile_image => 'https://image.flaticon.com/icons/png/512/147/147140.png'
+u3 = User.create :username => 'haesun95', :name => 'Oliver Heavens', :dob => '30-06-1985',:email => 'gptjs@ga.co', :password => 'candycane', :profile_image => 'https://image.flaticon.com/icons/png/512/147/147140.png'
+u4 = User.create :username => 'haesun89', :name => 'Rebecca Axe', :dob => '03-12-1990',:email => 'gptjs89@ga.co', :password => 'poptarts', :profile_image => 'https://image.flaticon.com/icons/png/512/147/147140.png'
 puts "#{ User.count } users created."
 
 Trip.destroy_all

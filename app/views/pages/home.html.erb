@@ -1,20 +1,23 @@
-<div class="sidebar">
-  <h1 class="goplanit">Goplanit</h1>
-  <h2>Your Trips</h2>
+<div class="sidebar-radius">
+  <h1 class="goplanit-white">Goplanit</h1>
+  <div class="profile-container">
+  <% if @current_user.present? %>
+  <%= image_tag @current_user.profile_image, :class => 'profile-picture' %>
+  <p class="profile">@<%= @current_user.username %></p>
+  <p class="profile">Name: <%= @current_user.name %></p>
+  <p class="profile">Date of Birth: <%= @current_user.dob %></p>
+  <p class="profile">Email: <%= @current_user.email %></p>
+  <% end %>
+</div>
+</div>
+
+<main>
+<h2>Your Trips</h2>
 <% if @current_user.trips.present? %>
 <% @trips.each do |trip| %>
 <p class="trip-link"><%= link_to trip.title, trip %></p>
 <% end %>
 <% end %>
-</div>
-
-<main>
-<div class="Welcome-current-user">
-<% if @current_user.present? %>
-<p>@<%= @current_user.username %></p>
-<% end %>
-<%= @current_user.email %>
-</div>
 </main>
 
 <!-- show user icon image with @username -->
