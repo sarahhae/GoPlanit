@@ -2,7 +2,7 @@
 
 <% if @trips.present? %>
 <% @trips.each do |trip| %>
-<p><%= link_to trip.title, item_path %></p>
+<p><%= link_to trip.title, trip_path %></p>
 <% end %>
 <% else %>
 <%= "There are no planned trips." %>

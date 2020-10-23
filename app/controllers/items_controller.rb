@@ -11,8 +11,8 @@ class ItemsController < ApplicationController
 
   def create
     item = Item.create item_params
-    trip = Trip.find params[:trip_id]
-    trip.items << item
+    trip = Trip.find params[:trip_id] # Add trip vaiable to find current trip id
+    trip.items << item # Append item to trip id
     redirect_to trip
   end
 
@@ -28,17 +28,17 @@ class ItemsController < ApplicationController
   def update
     item = Item.find params[:id]
     item.update item_params
-    redirect_to item
+    redirect_to item.trips.first
   end
 
   def destroy
     item = Item.find params[:id]
     item.destroy
-    redirect_to items_path
+    redirect_to trip
   end
 
   private
   def item_params
-    params.require(:item).permit(:title, :accomodation, :activity, :transport, :insurance, :misc)
+    params.require(:item).permit(:flight, :accomodation, :activity, :transport, :insurance, :misc)
   end
 end
