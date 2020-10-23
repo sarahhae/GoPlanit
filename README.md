@@ -15,7 +15,7 @@ Users can sign up for a profile and sign in to start logging their trips. The tr
 * Trip
 * Items ( trip details )
 
-![on large external screen](images/first-cut.jpg)
+![On large external screen](app/assets/images/wireframe.png)
 
 ## Design Layout - CSS
 
@@ -62,3 +62,5 @@ My initial and final goal is to create a web application where users can not onl
 ## Heroku site
 
 Goplanit: https://goplanit.herokuapp.com/login
+
+Please feel free to pull request! Any tips in this project or code is appreciated :)
