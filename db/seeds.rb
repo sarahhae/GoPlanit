@@ -29,7 +29,7 @@ t4.items << i4
 t5.items << i5
 
 puts "Trips and Users"
-u1.trips << t1 <<t2
+u1.trips << t1 << t2
 u2.trips << t3
 u3.trips << t4
 u4.trips << t5
